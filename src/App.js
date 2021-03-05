@@ -15,6 +15,7 @@ import ParImpar from './components/ParImpar'
 
 import Familia from './components/relacao/Familia'
 import Membro from './components/relacao/Membro'
+import UsuarioLogado from './components/UsuarioLogado'
 
 import Estilo from './components/estilo'
 
@@ -24,15 +25,37 @@ export default () => {
     // const b = getRandomIntInclusive(1, 60)
     return (
         <View style={Estilo.AjustarTexto}>
-            <Familia>
+            <UsuarioLogado 
+                usuario={{
+                    nome:"Igor",
+                    email:"teste@teste.com"
+                }}
+            />
+            <UsuarioLogado 
+                usuario={{
+                    
+                }}
+            />
+            <UsuarioLogado 
+                usuario={{
+                    nome:"",
+                    email:""
+                }}
+            />
+            <UsuarioLogado 
+                usuario={
+                    null
+                }
+            />
+
+            {/* <Familia>
                 <Membro nome="Igor" sobrenome="Da Silva"></Membro>
                 <Membro nome="Fulano" sobrenome="Da Beltrano"></Membro>
             </Familia>
             <Familia>
                 <Membro nome="Joaquin" sobrenome="De arruda"></Membro>
                 <Membro nome="Orlando" sobrenome="Da Belar"></Membro>
-            </Familia>
-            
+            </Familia> */}
             {/* <ParImpar num={num}/> */}
             {/* <ContadorV2/> */}
             {/* <PaiIndireto></PaiIndireto> */}
