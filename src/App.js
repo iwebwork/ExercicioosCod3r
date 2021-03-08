@@ -16,7 +16,8 @@ import { View,SafeAreaView } from 'react-native'
 // import Membro from './components/relacao/Membro'
 // import UsuarioLogado from './components/UsuarioLogado'
 // import ListaProdutos from './components/produtos/ListProdutos'
-import ListaProdutosV2 from './components/produtos/ListaProdutosV2'
+// import ListaProdutosV2 from './components/produtos/ListaProdutosV2'
+import DigiteSeuNome from './components/DigiteSeuNome'
 
 import Estilo from './components/estilo'
 
@@ -26,7 +27,9 @@ export default () => {
     // const b = getRandomIntInclusive(1, 60)
     return (
         <SafeAreaView style={Estilo.AjustarTexto}>
-            <ListaProdutosV2/>
+            <DigiteSeuNome/>
+
+            {/* <ListaProdutosV2/> */}
 
             {/* <ListaProdutos/>
                 <UsuarioLogado 
