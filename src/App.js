@@ -19,7 +19,8 @@ import { View,SafeAreaView } from 'react-native'
 // import ListaProdutosV2 from './components/produtos/ListaProdutosV2'
 // import DigiteSeuNome from './components/DigiteSeuNome'
 // import FlexBoxV1 from './components/layout/FlexBoxV1'
-import FlexBoxV2 from './components/layout/FlexBoxV2'
+// import FlexBoxV2 from './components/layout/FlexBoxV2'
+import FlexBoxV3 from './components/layout/FlexBoxV3'
 
 
 import Estilo from './components/estilo'
@@ -30,7 +31,9 @@ export default () => {
     // const b = getRandomIntInclusive(1, 60)
     return (
         <SafeAreaView style={Estilo.AjustarTexto}>
-            <FlexBoxV2/>
+            <FlexBoxV3/>
+            
+            {/* <FlexBoxV2/> */}
 
             {/* <FlexBoxV1/> */}
 

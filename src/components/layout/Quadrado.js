@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {View} from 'react-native' 
 
 export default props => {
-    const lado = 55
+    const lado = props.lado || 55
     return (
         <View 
             style={{
