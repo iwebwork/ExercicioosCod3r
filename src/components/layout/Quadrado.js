@@ -2,11 +2,12 @@ import React, {useState} from 'react'
 import {View} from 'react-native' 
 
 export default props => {
+    const lado = 55
     return (
         <View 
             style={{
-                height:55,
-                width:55,
+                height:lado,
+                width:lado,
                 backgroundColor: props.color || 'green'
             }}
         >

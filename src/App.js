@@ -18,7 +18,7 @@ import { View,SafeAreaView } from 'react-native'
 // import ListaProdutos from './components/produtos/ListProdutos'
 // import ListaProdutosV2 from './components/produtos/ListaProdutosV2'
 // import DigiteSeuNome from './components/DigiteSeuNome'
-import Quadrado from './components/layout/Quadrado'
+import FlexBoxV1 from './components/layout/FlexBoxV1'
 
 import Estilo from './components/estilo'
 
@@ -28,11 +28,7 @@ export default () => {
     // const b = getRandomIntInclusive(1, 60)
     return (
         <SafeAreaView style={Estilo.AjustarTexto}>
-            
-            <Quadrado color='blue'/>
-            <Quadrado/>
-            <Quadrado color="red"/>
-            <Quadrado color="#883"/>
+            <FlexBoxV1/>
 
             {/* <DigiteSeuNome/> */}
 
