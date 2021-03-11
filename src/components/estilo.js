@@ -23,7 +23,8 @@ export default StyleSheet.create({
         padding:20,
         color:'#FFFFFF'
     },
-    Botoes:{
+    TexteCenter:{
+        textAlign:'center',
     }
 
 })

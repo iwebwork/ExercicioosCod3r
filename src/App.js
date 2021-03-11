@@ -21,8 +21,8 @@ import { View,SafeAreaView } from 'react-native'
 // import FlexBoxV1 from './components/layout/FlexBoxV1'
 // import FlexBoxV2 from './components/layout/FlexBoxV2'
 // import FlexBoxV3 from './components/layout/FlexBoxV3'
-import FlexBoxV4 from './components/layout/FlexBoxV4'
-
+// import FlexBoxV4 from './components/layout/FlexBoxV4'
+import MegaSena from './components/Mega/MegaSena'
 
 
 import Estilo from './components/estilo'
@@ -33,7 +33,9 @@ export default () => {
     // const b = getRandomIntInclusive(1, 60)
     return (
         <SafeAreaView style={Estilo.AjustarTexto}>
-            <FlexBoxV4/>
+            <MegaSena qtDeNumeros={2}/>
+
+            {/* <FlexBoxV4/> */}
 
             {/* <FlexBoxV3/> */}
             
