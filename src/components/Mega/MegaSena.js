@@ -1,7 +1,8 @@
 import React, {Component} from 'react' 
-import {View,Text,TextInput,FlatList,Button} from 'react-native' 
+import {Text,TextInput,Button, View} from 'react-native' 
 import Estilo from './../estilo' 
 import {getRandomIntInclusive} from '../../funcoes'
+import MegaNumero from './MegaNumero'
 
 export default class Mega extends Component{
     
@@ -45,36 +46,44 @@ export default class Mega extends Component{
     }
 
     gerarNumero = nums => {
-        const numero = getRandomIntInclusive(0, this.state.qtDeNumeros * 1000)
+        const numero = getRandomIntInclusive(0, 1000)
 
         //Caso o numero gerado ja exista dentro do nums, eu chamo a função novamente
         return nums.includes(numero) ? this.gerarNumerosFunc(nums) : numero
 
     }
 
+    exibirNumeros = () => {
+        const nums = this.state.numeros
+        return nums.map(num => {
+            return <MegaNumero key = {num} num={num}/>
+        })
+    }
+
     render(){
         return(
-            <View>
+            <>
                 <Text style={Estilo.TxtGrande}>
                     numeros a gerar {this.state.qtDeNumeros}
                 </Text>
                 <TextInput
-                    style={{borderBottomWidth: 1}}
+                    style={[Estilo.TxtGrande,{borderBottomWidth: 1}]}
                     keyboardType={'numeric'}
                     placeholder="Escreva a quantidade de numeros"
                     value={`${this.state.qtDeNumeros}`}
                     onChangeText={this.alterarQtdNumero}
                 />
+                <View style={Estilo.AreaBotoes}>
+                    <Button
+                        title="Gerar Numeros"
+                        onPress={this.gerarNumerosProc}
+                    />
+                </View>
 
-                <Button
-                    title="Gerar Numeros"
-                    onPress={this.gerarNumerosProc}
-                />
-
-                <Text>
-                    {this.state.numeros.join('-')}
-                </Text>                
-            </View>
+                <View style={Estilo.line}>
+                    {this.exibirNumeros()}               
+                </View>
+            </>
             
         )
     }

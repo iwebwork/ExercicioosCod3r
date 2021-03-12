@@ -25,6 +25,11 @@ export default StyleSheet.create({
     },
     TexteCenter:{
         textAlign:'center',
+    },
+    line:{
+        flexDirection:'row',
+        flexWrap:'wrap',
+        justifyContent: 'center'
     }
 
 })
